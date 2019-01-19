@@ -1,0 +1,33 @@
+{
+  "name": "front",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Repo for Front-end application",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tashbenbetov/randomCoffee_front.git"
+  },
+  "keywords": [],
+  "author": "",
+  "browserslist": "chrome 70",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tashbenbetov/randomCoffee_front/issues"
+  },
+  "homepage": "https://github.com/tashbenbetov/randomCoffee_front#readme",
+  "dependencies": {
+    "@types/react": "^16.7.20",
+    "@types/react-dom": "^16.0.11",
+    "parcel-bundler": "^1.11.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "sass": "^1.16.1",
+    "typescript": "^3.2.4"
+  }
+}
