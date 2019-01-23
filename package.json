@@ -5,7 +5,7 @@
   "description": "Repo for Front-end application",
   "main": "index.js",
   "scripts": {
-    "start": "npx parcel --no-cache src/index.html"
+    "start": "npx parcel src/index.html"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
     "parcel-plugin-ttypescript": "^1.0.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "reactobem": "^1.0.1"
+    "reactobem": "^1.0.3"
   },
   "devDependencies": {
     "sass": "^1.16.1",

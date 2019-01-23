@@ -1,0 +1,33 @@
+.Space {
+	&__Space {
+		&__root {
+		}
+		&__title {
+			font-size: 20px;
+			font-weight: 500;
+		}
+		&__list {
+			margin: 10px 0;
+		}
+		&__item {
+			display: flex;
+			width: 200px;
+		}
+		&__name {
+			flex: 1;
+		}
+		&__remove {
+			color: red;
+			cursor: pointer;
+		}
+	}
+	&__AddUser {
+		&__name, &__email {
+			padding: 10px 10px;
+		}
+		&__add {
+			margin: 10px 0;
+			padding: 10px 20px;
+		}
+	}
+}
