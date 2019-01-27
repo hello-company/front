@@ -5,7 +5,13 @@
 		"outDir": "dist",
 		"jsx": "react",
 		"strict": true,
+		"preserveSymlinks": true,
 		"esModuleInterop": true,
-		"plugins": [{ "transform": "reactobem" }]
-	}
+		"plugins": [
+			{ "transform": "typeusage", "schema": "src/gqlschema.d.ts", "outFile": "src/types.js" }, 
+			{ "transform": "atom4/transformer" }, 
+			{ "transform": "reactobem" }
+		]
+	},
+	"exclude": ["node_modules"]
 }

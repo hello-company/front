@@ -1,6 +1,7 @@
+import { observable } from 'atom4';
 import React from 'react';
-import './styles.scss';
 import { Space } from '../Space/Space';
+import './styles.scss';
 
 export function App() {
 	return (
@@ -11,7 +12,7 @@ export function App() {
 	);
 }
 
-function AllSpaces() {
+const AllSpaces = observable(function AllSpaces() {
 	const spaces = [{ id: 1, name: 'Google' }];
 	return (
 		<root>
@@ -27,4 +28,4 @@ function AllSpaces() {
 			</list>
 		</root>
 	);
-}
+});
