@@ -6,7 +6,9 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "npx --node-arg --preserve-symlinks parcel --no-cache --no-hmr src/index.html",
-		"debug": "npx --node-arg --inspect-brk --node-arg --preserve-symlinks parcel --no-cache --no-hmr src/index.html"
+		"debug": "npx --node-arg --inspect-brk --node-arg --preserve-symlinks parcel --no-cache --no-hmr src/index.html",
+		"tsc": "npx --node-arg --preserve-symlinks ttsc",
+		"tsc-debug": "npx --node-arg --inspect-brk --node-arg --preserve-symlinks ttsc"
 	},
 	"repository": {
 		"type": "git",

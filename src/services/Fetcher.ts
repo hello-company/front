@@ -6,7 +6,11 @@ export function fetchGQL<T>(query: string): T {
 		data: T;
 	}).data;
 }
-export function fetchJSON<T>(url: string, params?: RequestInit): T {
+export function fetchJSON<T>(url: string, params: RequestInit = {}): T {
+	params.headers = params.headers || {};
+	params.headers['Content-Type' as never] =
+		params.headers['Content-Type' as never] || ('application/json' as never);
+
 	const urlCache = getModel(UrlCache);
 	const json = urlCache.get<T>(url);
 	if (json instanceof Promise) throw json;
@@ -26,7 +30,7 @@ export function fetchJSON<T>(url: string, params?: RequestInit): T {
 }
 
 // const LoadingSymbol = Symbol('Loading');
-class UrlCache extends Singletone {
+export class UrlCache extends Singletone {
 	protected cache: Map<
 		string | number,
 		object | undefined | Promise<{}> | Error

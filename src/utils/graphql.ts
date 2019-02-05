@@ -1,6 +1,7 @@
 export function graphqlFactory<T extends object>(fetchGraphqlQuery: (query: string) => any) {
-	const obj = {} as TransformMethods<T>;
-	return new Proxy<TransformMethods<T>>(obj, {
+	type Ret = TransformMethods<T>;
+	const obj = {} as Ret;
+	return new Proxy<Ret>(obj, {
 		get(target, prop: never) {
 			const fn = target[prop];
 			if (fn) return fn;

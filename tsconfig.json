@@ -8,8 +8,13 @@
 		"preserveSymlinks": true,
 		"esModuleInterop": true,
 		"plugins": [
-			{ "transform": "typeusage", "schema": "src/gqlschema.d.ts", "outFile": "src/types.js" }, 
-			{ "transform": "atom4/transformer" }, 
+			{
+				"transform": "typeusage",
+				"schema": "src/gqlschema.d.ts",
+				"excludeTypes": ["Query", "Mutation"],
+				"outFile": "src/types.js"
+			},
+			{ "transform": "atom4/transformer" },
 			{ "transform": "reactobem" }
 		]
 	},

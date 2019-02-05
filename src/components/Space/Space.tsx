@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.scss';
 import { fetchGQL } from '../../services/Fetcher';
-import { observable, getModel } from 'atom4';
+import { observable, getModel, toJSON, Singletone, Multitone } from 'atom4';
 import { Server } from '../../services/Server';
 
 export const Space = observable(function Space() {
@@ -49,3 +49,5 @@ function AddUser() {
 		</root>
 	);
 }
+
+
